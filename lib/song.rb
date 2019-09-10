@@ -12,7 +12,7 @@ class Song
     @genre = genre
     @@count += 1
     @@artists << artist
-    @@genres << genre
+    @@genres << genre if !@@genres.has_key?(genre)
     if @@genre_count.has_key?(genre)
       @@genre_count[genre] += 1
     else
