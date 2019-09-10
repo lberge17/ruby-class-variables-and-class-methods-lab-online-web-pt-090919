@@ -30,11 +30,11 @@ class Song
   end
   
   def self.artists
-    @@artists.flatten
+    @@artists.uniq
   end
   
   def self.genres
-    @@genres.flatten
+    @@genres.uniq
   end
   
   def self.genre_count
